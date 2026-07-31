@@ -1,65 +1,41 @@
-import InnerTemplate from "@/components/layout/InnerTemplate";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import Link from "next/link";
+import InnerPageTemplate, {
+  PageGridItem,
+} from "@/components/layout/InnerTemplate";
 
-const publications = [
+const publicationsData: PageGridItem[] = [
   {
-    title: "The Rajshahi University Journal of Arts and Humanities",
-    issue: "Vol. 50, 2023",
-    link: "#",
+    id: 1,
+    title: "Publications Office",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2025/08/DJI_20000905130020_0941_D-01-scaled.jpeg",
+    link: "/publications/office",
   },
   {
-    title: "Journal of Science and Technology",
-    issue: "Vol. 25, 2023",
-    link: "#",
+    id: 2,
+    title: "Annual Reports",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/Annual-Reports.jpg",
+    link: "/publications/annual-reports",
   },
   {
-    title: "Business Review",
-    issue: "Vol. 15, 2023",
-    link: "#",
+    id: 3,
+    title: "RU Journals",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/Journal.jpg",
+    link: "/publications/journals",
   },
   {
-    title: "Social Science Journal",
-    issue: "Vol. 30, 2023",
-    link: "#",
+    id: 4,
+    title: "RU Journals Call for Papers",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2024/08/Main-Gate_RU.jpg",
+    link: "/publications/call-for-papers",
   },
 ];
 
 export default function PublicationsPage() {
   return (
-    <InnerTemplate
-      pageTitle="Journals & Publications"
-      breadcrumbs={[{ title: "Home", href: "/" }]}
-    >
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Journal Title</TableHead>
-            <TableHead>Latest Issue</TableHead>
-            <TableHead className="text-right">Link</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {publications.map((pub) => (
-            <TableRow key={pub.title}>
-              <TableCell className="font-medium">{pub.title}</TableCell>
-              <TableCell>{pub.issue}</TableCell>
-              <TableCell className="text-right">
-                <Link href={pub.link} className="text-ru-blue hover:underline">
-                  View
-                </Link>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </InnerTemplate>
+    <InnerPageTemplate
+      pageTitle="Publications"
+      bannerImage="https://www.ru.ac.bd/wp-content/uploads/2022/02/admin-building.jpg"
+      items={publicationsData}
+    />
   );
 }

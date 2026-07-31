@@ -1,56 +1,57 @@
-import InnerTemplate from "@/components/layout/InnerTemplate";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Link from "next/link";
+import InnerPageTemplate, {
+  PageGridItem,
+} from "@/components/layout/InnerTemplate";
 
-const academicSections = [
+const academicData: PageGridItem[] = [
   {
-    title: "Faculties & Departments",
-    description: "Explore the various faculties and academic departments.",
-    href: "/academic/departments",
+    id: 1,
+    title: "Faculties",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-25-at-12.11.16-PM-1.jpeg",
+    link: "https://www.ru.ac.bd/faculties/",
   },
   {
-    title: "Academic Calendar",
-    description: "View the academic schedule, holidays, and important dates.",
-    href: "/academic/calendar",
+    id: 2,
+    title: "Institutes",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-25-at-12.13.21-PM-1.jpeg",
+    link: "https://www.ru.ac.bd/academic/institutes/",
   },
   {
-    title: "Admission",
-    description: "Information for prospective undergraduate and graduate students.",
-    href: "/academic/admission",
+    id: 3,
+    title: "Departments",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-25-at-12.18.22-PM-1.jpeg",
+    link: "https://www.ru.ac.bd/academic/department/",
   },
   {
-    title: "Results",
-    description: "Check examination results for various courses.",
-    href: "/academic/results",
+    id: 4,
+    title: "Schools",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-25-at-12.25.20-PM.jpeg",
+    link: "https://www.ru.ac.bd/academic/schools/",
+  },
+  {
+    id: 5,
+    title: "Affiliated Colleges & Institutions",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/colleges.jpg",
+    link: "https://www.ru.ac.bd/academic/affiliated-colleges-institutions/",
+  },
+  {
+    id: 6,
+    title: "Office of The International Affairs",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2025/08/International-Affairs-1.jpg",
+    link: "https://www.ru.ac.bd/oia/",
   },
 ];
 
 export default function AcademicPage() {
   return (
-    <InnerTemplate
-      pageTitle="Academic Information"
-      breadcrumbs={[{ title: "Home", href: "/" }]}
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {academicSections.map((section) => (
-          <Link href={section.href} key={section.title}>
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle>{section.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{section.description}</CardDescription>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
-      </div>
-    </InnerTemplate>
+    <InnerPageTemplate
+      pageTitle="Academic"
+      bannerImage="https://www.ru.ac.bd/wp-content/uploads/2022/02/admin-building.jpg"
+      items={academicData}
+    />
   );
 }

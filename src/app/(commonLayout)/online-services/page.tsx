@@ -1,50 +1,90 @@
-import InnerTemplate from "@/components/layout/InnerTemplate";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Link from "next/link";
+import InnerPageTemplate, {
+  PageGridItem,
+} from "@/components/layout/InnerTemplate";
 
-const services = [
+const onlineServicesData: PageGridItem[] = [
   {
-    title: "Online Admission",
-    description: "Apply for undergraduate and graduate programs online.",
-    href: "/admission",
+    id: 1,
+    title: "Webmail",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/Untitledff.jpg",
+    link: "/online-services/webmail",
   },
   {
-    title: "Result Portal",
-    description: "Check your semester and final examination results.",
-    href: "/results",
+    id: 2,
+    title: "Information Update",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/dasdf.jpg",
+    link: "/online-services/information-update",
   },
   {
-    title: "Library E-Resources",
-    description: "Access digital journals, e-books, and databases.",
-    href: "http://library.ru.ac.bd",
+    id: 3,
+    title: "Annual Reporting System",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/annual-report.jpg",
+    link: "/online-services/annual-reporting",
   },
   {
-    title: "Student Portal",
-    description: "Access your student profile, course registration, and more.",
-    href: "/student-portal",
+    id: 4,
+    title: "Application for Certificate & Transcript",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/Untitlegd.jpg",
+    link: "/online-services/certificate-application",
+  },
+  {
+    id: 5,
+    title: "Form Fill-up System for Students",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/Untitled.jpg",
+    link: "/online-services/form-fillup",
+  },
+  {
+    id: 6,
+    title: "Exam Form Fill-up (From Session 2022-2023)",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/12/exam-form.jpg",
+    link: "/online-services/exam-form",
+  },
+  {
+    id: 7,
+    title:
+      "Internet Registration/Cancellation for Residence (Teacher/Officer/MPhil/PhD/International Student)",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2025/08/Untithhjnjnnled.jpg",
+    link: "/online-services/residence-internet",
+  },
+  {
+    id: 8,
+    title: "Student Feedback System",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/Untitdled.jpg",
+    link: "/online-services/student-feedback",
+  },
+  {
+    id: 9,
+    title: "Registration Form Download System",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/U3ntitled.jpg",
+    link: "/online-services/registration-form",
+  },
+  {
+    id: 10,
+    title: "Hall Residency Application",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/11/1953-scaled.png",
+    link: "/online-services/hall-residency",
+  },
+  {
+    id: 11,
+    title: "Medical Center",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2026/02/mdbutton3.jpg",
+    link: "/online-services/medical-center",
+  },
+  {
+    id: 12,
+    title: "Guest House Booking",
+    image: "https://www.ru.ac.bd/wp-content/uploads/2025/08/Untitjhjjjled.jpg",
+    link: "/online-services/guest-house-booking",
   },
 ];
 
 export default function OnlineServicesPage() {
   return (
-    <InnerTemplate
-      pageTitle="Online Services"
-      breadcrumbs={[{ title: "Home", href: "/" }]}
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {services.map((service) => (
-          <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'}>
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle>{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{service.description}</p>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
-      </div>
-    </InnerTemplate>
+    <InnerPageTemplate
+      pageTitle="RU Online Services"
+      bannerImage="https://www.ru.ac.bd/wp-content/uploads/2022/02/admin-building.jpg"
+      items={onlineServicesData}
+    />
   );
 }
