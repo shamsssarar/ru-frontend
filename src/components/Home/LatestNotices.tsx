@@ -8,42 +8,33 @@ import { Download, ArrowRight, Calendar, ChevronRight } from "lucide-react";
 const notices = [
   {
     id: 1,
-    day: "09",
-    month: "JUL",
-    title:
-      "শসুসটিএসসিসিতে সঙ্গীত, নাটক, তবলা, উপস্থাপনা ও আবৃত্তি বিষয়ক ফ্রি প্রশিক্ষণ কার্যক্রম ২০২৬",
-    link: "https://www.ru.ac.bd/blog/notice/",
+    date: "2024-07-30",
+    title: "Result of 1st year Honours Final Examination 2023",
+    link: "/notices/1",
   },
   {
     id: 2,
-    day: "16",
-    month: "JUN",
-    title:
-      "২০২৬-২০২৭ শিক্ষাবর্ষে নিয়মিত ELT মাস্টার্স প্রোগ্রামে ইনস্টিটিউট অব ইংলিশ এন্ড আদার ল্যাংগুয়েজেজ-এ ভর্তি চলছে",
-    link: "https://www.ru.ac.bd/blog/notice/",
+    date: "2024-07-28",
+    title: "Admission Circular for PhD Program 2024-25",
+    link: "/notices/2",
   },
   {
     id: 3,
-    day: "11",
-    month: "JUN",
-    title:
-      "ইন্সটিটিউট অব বায়োলজিক্যাল সায়েন্সেস, ২০২৬-২০২৭ শিক্ষাবর্ষের এমপিএইচ সান্ধ্য প্রগ্রাম ব্যাচ-১৮ এ আবেদনের সময়সীমা বৃদ্ধি",
-    link: "https://www.ru.ac.bd/blog/notice/",
+    date: "2024-07-25",
+    title: "Class Schedule for Summer Semester 2024",
+    link: "/notices/3",
   },
   {
     id: 4,
-    day: "08",
-    month: "JUN",
-    title:
-      "২০২৬-২০২৭ শিক্ষাবর্ষে এম.ফিল ও পিএইচ.ডি প্রোগ্রামে ভর্তি বিজ্ঞপ্তি, শিক্ষা ও গবেষণা ইনস্টিটিউট",
-    link: "https://www.ru.ac.bd/blog/notice/",
+    date: "2024-07-22",
+    title: "Scholarship Opportunity for Undergraduate Students",
+    link: "/notices/4",
   },
   {
     id: 5,
-    day: "24",
-    month: "MAY",
+    date: "2024-07-20",
     title: "প্রফেসর গ্রেড-২ সংক্রান্ত বিজ্ঞপ্তি",
-    link: "https://www.ru.ac.bd/blog/notice/",
+    link: "/notices/5",
   },
 ];
 
@@ -99,10 +90,10 @@ export default function LatestNotices() {
               >
                 <div className="flex flex-col items-center justify-center bg-[#1b2032] border-r border-gray-600 px-4 md:px-6 py-3 min-w-[70px] md:min-w-[90px]">
                   <span className="text-[18px] md:text-[20px] font-bold leading-none">
-                    {notice.day}
+                    {new Date(notice.date).getDate()}
                   </span>
                   <span className="text-[12px] md:text-[14px] font-medium mt-1">
-                    {notice.month}
+                    {new Date(notice.date).toLocaleString('default', { month: 'short' }).toUpperCase()}
                   </span>
                 </div>
                 <div className="flex-1 flex items-center px-4 md:px-6 py-3">
@@ -127,7 +118,7 @@ export default function LatestNotices() {
 
           <div className="flex justify-end mt-6 mb-12">
             <Link
-              href="https://www.ru.ac.bd/notices/"
+              href="/notices"
               className="inline-flex items-center gap-2 bg-[#1b2032] hover:bg-[#2c3452] text-white text-[13px] font-bold uppercase px-6 py-3 rounded-full transition-colors shadow-md"
             >
               <ArrowRight className="w-4 h-4" />
