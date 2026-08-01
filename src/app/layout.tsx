@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import FooterWrapper from "@/components/layout/FooterWrapper";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -47,7 +48,7 @@ export default function RootLayout({
 
         {/* The 'children' represents the content of whatever page route you are on */}
         <main className="flex-1 w-full">{children}</main>
-        <Footer />
+        <FooterWrapper />
       </body>
     </html>
   );
