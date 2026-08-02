@@ -9,7 +9,7 @@ export default function FooterWrapper() {
   // Hide the global footer if the path matches a sub-page of governance or administration
   // (e.g., /administration/vc hides the footer, but /administration keeps the global footer)
   const isCustomFooterRoute = pathname.match(
-    /^\/(governance|administration)\/.+/,
+    /^\/(governance|administration|academic\/faculties)\/.+/,
   );
 
   if (isCustomFooterRoute) {
