@@ -46,7 +46,7 @@ const events = [
       "রাবিতে ‘মিট দ্য অ্যাম্বাসেডর ২০২৬’ অনুষ্ঠানে ফরাসি রাষ্ট্রদূতের বক্তৃতা",
     image:
       "https://www.ru.ac.bd/wp-content/uploads/2026/07/RU-Pic1-29.07.2026-scaled.jpg",
-    link: "https://www.ru.ac.bd/blog/",
+    link: "/events/1",
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ const events = [
     title: "রাবিতে আন্তর্জাতিক সেমিনার অনুষ্ঠিত",
     image:
       "https://www.ru.ac.bd/wp-content/uploads/2026/07/RU-Pic1a-16.07.2026-scaled.jpg",
-    link: "https://www.ru.ac.bd/blog/",
+    link: "/events/2",
   },
   {
     id: 3,
@@ -62,7 +62,7 @@ const events = [
     title: "রাবি উপাচার্যের সাথে কোইকা প্রতিনিধিদলের মতবিনিময়",
     image:
       "https://www.ru.ac.bd/wp-content/uploads/2026/07/RU-Pica-12.07.2026-scaled.jpg",
-    link: "https://www.ru.ac.bd/blog/",
+    link: "/events/3",
   },
 ];
 
@@ -93,7 +93,9 @@ export default function LatestNotices() {
                     {new Date(notice.date).getDate()}
                   </span>
                   <span className="text-[12px] md:text-[14px] font-medium mt-1">
-                    {new Date(notice.date).toLocaleString('default', { month: 'short' }).toUpperCase()}
+                    {new Date(notice.date)
+                      .toLocaleString("default", { month: "short" })
+                      .toUpperCase()}
                   </span>
                 </div>
                 <div className="flex-1 flex items-center px-4 md:px-6 py-3">
@@ -184,7 +186,7 @@ export default function LatestNotices() {
           {/* All Events Button */}
           <div className="flex justify-end mt-8">
             <Link
-              href="https://www.ru.ac.bd/events/"
+              href="/events"
               className="inline-flex items-center gap-2 bg-[#1b2032] hover:bg-[#2c3452] text-white text-[13px] font-bold uppercase px-6 py-3 rounded-full transition-colors shadow-md"
             >
               <ArrowRight className="w-4 h-4" />
