@@ -41,15 +41,15 @@ const bioNotices = [
 ];
 
 const bioDepartments = [
-  { name: "Psychology", link: "/academic/department/Psychology" },
-  { name: "Botany", link: "/academic/department/botany" },
-  { name: "Zoology", link: "/academic/department/zoology" },
+  { name: "Psychology", link: "/academic/departments/psychology" },
+  { name: "Botany", link: "/academic/departments/botany" },
+  { name: "Zoology", link: "/academic/departments/zoology" },
   {
     name: "Genetic Engineering & Biotechnology",
-    link: "/academic/department/geb",
+    link: "/academic/departments/geb",
   },
-  { name: "Clinical Psychology", link: "/academic/department/clinicalpsy" },
-  { name: "Microbiology", link: "/academic/department/microbiology" },
+  { name: "Clinical Psychology", link: "/academic/departments/clinicalpsy" },
+  { name: "Microbiology", link: "/academic/departments/microbiology" },
 ];
 
 export default function FacultyOfBiologicalSciencesPage() {

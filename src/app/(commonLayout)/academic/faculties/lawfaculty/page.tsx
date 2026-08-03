@@ -42,10 +42,10 @@ const lawNotices = [
 ];
 
 const lawDepartments = [
-  { name: "Law", link: "/academic/department/law" },
+  { name: "Law", link: "/academic/departments/law" },
   {
     name: "Law and Land Administration",
-    link: "/academic/department/lawadmin",
+    link: "/academic/departments/lawadmin",
   },
 ];
 
@@ -61,7 +61,7 @@ const lawFooterColumns = [
         text: "List of the Deans",
         url: "/academic/faculties/lawfaculty/deans",
       },
-      { text: "Department", url: "/academic/department" },
+      { text: "Department", url: "/academic/departments" },
       {
         text: "Faculty Meeting",
         url: "/academic/faculties/lawfaculty/meetings",

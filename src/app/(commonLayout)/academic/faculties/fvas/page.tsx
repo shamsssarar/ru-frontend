@@ -69,7 +69,7 @@ const vetEvents = [
 const vetDepartments = [
   {
     name: "Veterinary & Animal Sciences",
-    link: "/academic/department/veterinarysc",
+    link: "/academic/departments/veterinarysc",
   },
 ];
 

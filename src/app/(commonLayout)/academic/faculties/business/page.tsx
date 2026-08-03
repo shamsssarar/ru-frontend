@@ -1,17 +1,17 @@
 import FacultySubPageTemplate from "@/components/layout/FacultySubPageTemplate";
 
 const businessDepartments = [
-  { name: "Finance", link: "/academic/department/finance" },
-  { name: "Marketing", link: "/academic/department/marketing" },
-  { name: "Banking and Insurance", link: "/academic/department/bankingins" },
-  { name: "Management Studies", link: "/academic/department/management" },
+  { name: "Finance", link: "/academic/departments/finance" },
+  { name: "Marketing", link: "/academic/departments/marketing" },
+  { name: "Banking and Insurance", link: "/academic/departments/bankingins" },
+  { name: "Management Studies", link: "/academic/departments/management" },
   {
     name: "Accounting and Information Systems",
-    link: "/academic/department/ais",
+    link: "/academic/departments/ais",
   },
   {
     name: "Tourism and Hospitality Management",
-    link: "/academic/department/thm",
+    link: "/academic/departments/thm",
   },
 ];
 

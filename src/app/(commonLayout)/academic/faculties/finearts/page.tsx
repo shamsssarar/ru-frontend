@@ -44,12 +44,12 @@ const fineArtsNotices = [
 const fineArtsDepartments = [
   {
     name: "Painting, Oriental Art & Printmaking",
-    link: "/academic/department/poap",
+    link: "/academic/departments/poap",
   },
-  { name: "Ceramic and Sculpture", link: "/academic/department/ceramics" },
+  { name: "Ceramic and Sculpture", link: "/academic/departments/ceramics" },
   {
     name: "Graphic Design, Craft & History of Arts",
-    link: "/academic/department/graphicdesign",
+    link: "/academic/departments/graphicdesign",
   },
 ];
 

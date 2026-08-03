@@ -28,9 +28,9 @@ const agriNotices = [
 const agriDepartments = [
   {
     name: "Agronomy and Agricultural Extension",
-    link: "/academic/department/agronomy",
+    link: "/academic/departments/agronomy",
   },
-  { name: "Crop Science and Technology", link: "/academic/department/cropsc" },
+  { name: "Crop Science and Technology", link: "/academic/departments/cropsc" },
 ];
 
 export default function FacultyOfAgriculturalPage() {

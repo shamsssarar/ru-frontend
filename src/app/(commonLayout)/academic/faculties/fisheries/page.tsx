@@ -43,7 +43,7 @@ const fishNotices = [
 ];
 
 const fishDepartments = [
-  { name: "Fisheries", link: "/academic/department/fisheries" },
+  { name: "Fisheries", link: "/academic/departments/fisheries" },
 ];
 
 export default function FacultyOfFisheriesPage() {

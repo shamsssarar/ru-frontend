@@ -22,7 +22,7 @@ const academicData: PageGridItem[] = [
     title: "Departments",
     image:
       "https://www.ru.ac.bd/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-25-at-12.18.22-PM-1.jpeg",
-    link: "/academic/department",
+    link: "/academic/departments",
   },
   {
     id: 4,

@@ -42,21 +42,21 @@ const artsNotices = [
 ];
 
 const artsDepartments = [
-  { name: "Philosophy", link: "/academic/department/philosophy" },
-  { name: "History", link: "/academic/department/history" },
-  { name: "English", link: "/academic/department/english" },
-  { name: "Bangla", link: "/academic/department/bangla" },
-  { name: "Islamic History & Culture", link: "/academic/department/ihc" },
-  { name: "Arabic", link: "/academic/department/arabic" },
-  { name: "Islamic Studies", link: "/academic/department/islamic-studies" },
-  { name: "Theatre", link: "/academic/department/theatre" },
-  { name: "Music", link: "/academic/department/music" },
+  { name: "Philosophy", link: "/academic/departments/philosophy" },
+  { name: "History", link: "/academic/departments/history" },
+  { name: "English", link: "/academic/departments/english" },
+  { name: "Bangla", link: "/academic/departments/bangla" },
+  { name: "Islamic History & Culture", link: "/academic/departments/ihc" },
+  { name: "Arabic", link: "/academic/departments/arabic" },
+  { name: "Islamic Studies", link: "/academic/departments/islamicstudies" },
+  { name: "Theatre", link: "/academic/departments/theatre" },
+  { name: "Music", link: "/academic/departments/music" },
   {
     name: "Persian language and literature",
-    link: "/academic/department/persian",
+    link: "/academic/departments/persian",
   },
-  { name: "Sanskrit", link: "/academic/department/sanskrit" },
-  { name: "Urdu", link: "/academic/department/urdu" },
+  { name: "Sanskrit", link: "/academic/departments/sanskrit" },
+  { name: "Urdu", link: "/academic/departments/urdu" },
 ];
 
 const artsFooterColumns = [
@@ -65,7 +65,7 @@ const artsFooterColumns = [
     links: [
       { text: "Message from Dean", url: "/academic/faculties/arts/message" },
       { text: "List of the Deans", url: "/academic/faculties/arts/deans" },
-      { text: "Department", url: "/academic/department" },
+      { text: "Department", url: "/academic/departments" },
       { text: "Faculty Meeting", url: "/academic/faculties/arts/meetings" },
       { text: "Admissions", url: "/admissions" },
     ],

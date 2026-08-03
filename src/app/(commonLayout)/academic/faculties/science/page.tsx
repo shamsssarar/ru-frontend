@@ -27,23 +27,23 @@ const scienceNotices = [
 ];
 
 const scienceDepartments = [
-  { name: "Mathematics", link: "/academic/department/math" },
-  { name: "Physics", link: "/academic/department/physics" },
-  { name: "Chemistry", link: "/academic/department/chemistry" },
-  { name: "Statistics", link: "/academic/department/stat" },
-  { name: "Pharmacy", link: "/academic/department/pharmacy" },
-  { name: "Applied Mathematics", link: "/academic/department/appmath" },
+  { name: "Mathematics", link: "/academic/departments/math" },
+  { name: "Physics", link: "/academic/departments/physics" },
+  { name: "Chemistry", link: "/academic/departments/chemistry" },
+  { name: "Statistics", link: "/academic/departments/stat" },
+  { name: "Pharmacy", link: "/academic/departments/pharmacy" },
+  { name: "Applied Mathematics", link: "/academic/departments/appmath" },
   {
     name: "Biochemistry & Molecular Biology",
-    link: "/academic/department/biochemistry",
+    link: "/academic/departments/biochemistry",
   },
   {
     name: "Physical Education and Sports Sciences",
-    link: "/academic/department/physicaledu",
+    link: "/academic/departments/physicaledu",
   },
   {
     name: "Population Science & Human Resource Development",
-    link: "/academic/department/populationsc",
+    link: "/academic/departments/populationsc",
   },
 ];
 

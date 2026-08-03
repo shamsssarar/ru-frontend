@@ -9,17 +9,16 @@ const socialNotices = [
 ];
 
 const socialDepartments = [
-  { name: "Economics", link: "/academic/department/economics" },
-  { name: "Political Science", link: "/academic/department/politicalsc" },
-  { name: "Social Work", link: "/academic/department/socialwork" },
-  { name: "Sociology", link: "/academic/department/sociology" },
-  { name: "Folklore & Social Development studies", link: "/academic/department/folklore" },
-  { name: "Anthropology", link: "/academic/department/anthropology" },
-  { name: "Public Administration", link: "/academic/department/publicadmin" },
-  { name: "International Relations", link: "/academic/department/interrelations" },
-  { name: "Mass Communication and Journalism", link: "/academic/department/mcj" },
-  { name: "Information Science & Library Management", link: "/academic/department/islm" },
-  { name: "Centre For Social Innovation & Sustainibility", link: "/academic/department/csis" },
+  { name: "Economics", link: "/academic/departments/economics" },
+  { name: "Political Science", link: "/academic/departments/politicalsc" },
+  { name: "Social Work", link: "/academic/departments/socialwork" },
+  { name: "Sociology", link: "/academic/departments/sociology" },
+  { name: "Folklore & Social Development studies", link: "/academic/departments/folklore" },
+  { name: "Anthropology", link: "/academic/departments/anthropology" },
+  { name: "Public Administration", link: "/academic/departments/publicadmin" },
+  { name: "International Relations", link: "/academic/departments/interrelations" },
+  { name: "Mass Communication and Journalism", link: "/academic/departments/mcj" },
+  { name: "Information Science & Library Management", link: "/academic/departments/islm" },
 ];
 
 export default function FacultyOfSocialSciencePage() {

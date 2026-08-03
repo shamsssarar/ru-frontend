@@ -45,9 +45,9 @@ const geoNotices = [
 const geoDepartments = [
   {
     name: "Geography & Environmental Studies",
-    link: "/academic/department/geography",
+    link: "/academic/departments/geography",
   },
-  { name: "Geology & Mining", link: "/academic/department/geologymin" },
+  { name: "Geology & Mining", link: "/academic/departments/geologymin" },
 ];
 
 export default function FacultyOfGeosciencesPage() {

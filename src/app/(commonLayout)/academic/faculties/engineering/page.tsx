@@ -42,22 +42,22 @@ const engNotices = [
 ];
 
 const engDepartments = [
-  { name: "Computer Science & Engineering", link: "/academic/department/cse" },
+  { name: "Computer Science & Engineering", link: "/academic/departments/cse" },
   {
     name: "Electrical and Electronic Engineering",
-    link: "/academic/department/eee",
+    link: "/academic/departments/eee",
   },
   {
     name: "Materials Science and Engineering",
-    link: "/academic/department/mse",
+    link: "/academic/departments/mse",
   },
   {
     name: "Applied Chemistry & Chemical Engineering",
-    link: "/academic/department/acce",
+    link: "/academic/departments/acce",
   },
   {
     name: "Information & Communication Engineering",
-    link: "/academic/department/ice",
+    link: "/academic/departments/ice",
   },
 ];
 
