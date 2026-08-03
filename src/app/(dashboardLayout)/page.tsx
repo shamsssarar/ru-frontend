@@ -1,14 +1,7 @@
-import InnerTemplate from "@/components/layout/InnerTemplate";
+import React from "react";
 
-export default function DashboardPage() {
-  return (
-    <InnerTemplate
-      pageTitle="Dashboard"
-      breadcrumbs={[{ title: "Home", href: "/" }]}
-    >
-      <div>
-        <p>Welcome to your dashboard!</p>
-      </div>
-    </InnerTemplate>
-  );
+function page() {
+  return <div>page</div>;
 }
+
+export default page;
