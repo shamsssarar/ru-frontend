@@ -59,7 +59,7 @@ export default function VCMessage() {
 
             <div>
               <Link
-                href="https://www.ru.ac.bd/vc/"
+                href="/administration/vc"
                 className="inline-block bg-[#4B4F58] hover:bg-[#1b2032] text-white text-[14px] font-medium px-8 py-3 rounded-full transition-colors duration-300 shadow-sm"
               >
                 Read More

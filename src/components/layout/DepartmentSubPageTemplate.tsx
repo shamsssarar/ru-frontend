@@ -22,6 +22,7 @@ import {
 
 import { ReactNode } from "react";
 import DepartmentFooter, { FooterColumn } from "./DepartmentFooter";
+import DepartmentNavbar from "@/components/layout/DepartmentNavbar";
 
 interface Notice {
   id: string | number;
@@ -40,6 +41,7 @@ interface Event {
 }
 
 interface DepartmentSubPageProps {
+  deptSlug: string;
   pageTitle: string;
   officialName: string;
   officialTitle: string;
@@ -55,6 +57,7 @@ interface DepartmentSubPageProps {
 }
 
 export default function DepartmentSubPageTemplate({
+  deptSlug,
   pageTitle,
   officialName,
   officialTitle,
@@ -125,6 +128,9 @@ export default function DepartmentSubPageTemplate({
           )}
         </Carousel>
       </section>
+
+      {/* INSERT THE NEW NAVBAR HERE */}
+      <DepartmentNavbar deptSlug={deptSlug} />
 
       {/* 2. Message Content Area */}
       <section className="w-full bg-[#f1f1f1] py-12 md:py-16">
