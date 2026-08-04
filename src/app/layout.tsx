@@ -3,8 +3,9 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import FooterWrapper from "@/components/layout/FooterWrapper";
+// 1. Import the ThemeProvider
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning /* 2. REQUIRED: Prevents theme hydration errors */
       className={cn(
         "h-full",
         "antialiased",
@@ -43,12 +45,16 @@ export default function RootLayout({
       <body
         className={`${inter.className} min-h-screen bg-background font-sans antialiased flex flex-col`}
       >
-        {/* The Navbar will appear on every single page */}
-        <Navbar />
+        {/* 3. Wrap your layout contents inside the ThemeProvider */}
+        <ThemeProvider>
+          {/* The Navbar will appear on every single page */}
+          <Navbar />
 
-        {/* The 'children' represents the content of whatever page route you are on */}
-        <main className="flex-1 w-full">{children}</main>
-        <FooterWrapper />
+          {/* The 'children' represents the content of whatever page route you are on */}
+          <main className="flex-1 w-full">{children}</main>
+
+          <FooterWrapper />
+        </ThemeProvider>
       </body>
     </html>
   );
