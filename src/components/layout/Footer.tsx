@@ -2,59 +2,10 @@
 
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-
-// Grouping the footer data to map over cleanly
-const footerData = [
-  {
-    title: "Quick Links",
-    links: [
-      "Vision and Mission",
-      "Web Mail",
-      "ICT Center",
-      "Public Relations",
-      "Student Insurance",
-    ],
-  },
-  {
-    title: "Additional Links",
-    links: [
-      "APA",
-      "NOC",
-      "CCDC",
-      "SHEPP",
-      "Smart ID Card Cell, RU",
-      "Central Library",
-      "Exam Controller",
-    ],
-  },
-  {
-    title: "Important Links",
-    links: [
-      "Notices",
-      "Events",
-      "Conferences",
-      "Form Download",
-      "Convocation",
-      "Tender Notice",
-    ],
-  },
-  {
-    title: "Footer Menu",
-    links: [
-      "Privacy Policy",
-      "Sitemap",
-      "RU Contacts App",
-      "BdREN vSession Login",
-      "BdREN vSession tutorial",
-      "M.Phil/Ph.D/Special Courses",
-      "International Students",
-      "Contact",
-    ],
-  },
-];
+import { footerData } from "@/data/footerData";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear(); // Using dynamic year, though you specified 2026
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="w-full bg-[#040919] text-white pt-12 pb-6 font-roboto transition-colors duration-300">
@@ -73,10 +24,12 @@ export default function Footer() {
                     <ChevronRight className="w-3.5 h-3.5 mr-2 text-gray-400 dark:text-slate-400 shrink-0" />
 
                     <Link
-                      href="#"
+                      href={link.href}
+                      target={link.isExternal ? "_blank" : "_self"}
+                      rel={link.isExternal ? "noopener noreferrer" : undefined}
                       className="text-[14px] text-gray-300 dark:text-slate-400 hover:text-[#e83e8c] dark:hover:text-[#e83e8c] transition-colors duration-200"
                     >
-                      {link}
+                      {link.title}
                     </Link>
                   </li>
                 ))}
@@ -87,8 +40,8 @@ export default function Footer() {
 
         <div className="border-t border-gray-800/80 pt-6 flex justify-center text-center dark:border-slate-700">
           <p className="text-[14px] text-gray-400 font-medium dark:text-slate-400">
-            All rights reserved &copy; 2026, University of Rajshahi. Powered by
-            ICT Center, RU.
+            All rights reserved &copy; {currentYear}, University of Rajshahi.
+            Powered by ICT Center, RU.
           </p>
         </div>
       </div>
