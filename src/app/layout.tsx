@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import FooterWrapper from "@/components/layout/FooterWrapper";
 // 1. Import the ThemeProvider
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Preloader from "@/components/layout/Preloader";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} min-h-screen bg-background font-sans antialiased flex flex-col transition-colors duration-300 dark:bg-slate-900`}
       >
+        <Preloader />
         {/* 3. Wrap your layout contents inside the ThemeProvider */}
         <ThemeProvider>
           {/* The Navbar will appear on every single page */}
