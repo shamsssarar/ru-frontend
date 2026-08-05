@@ -13,9 +13,6 @@ const footerData = [
       "ICT Center",
       "Public Relations",
       "Student Insurance",
-      "RU 50 Years Master Plan",
-      "Office of The International Affairs",
-      "RU Alumni",
     ],
   },
   {
@@ -28,7 +25,6 @@ const footerData = [
       "Smart ID Card Cell, RU",
       "Central Library",
       "Exam Controller",
-      "Registered Graduate Application",
     ],
   },
   {
@@ -37,11 +33,8 @@ const footerData = [
       "Notices",
       "Events",
       "Conferences",
-      "Guest House Booking",
-      "Arun HPCC",
       "Form Download",
       "Convocation",
-      "Recruitment at RU",
       "Tender Notice",
     ],
   },
@@ -81,7 +74,7 @@ export default function Footer() {
 
                     <Link
                       href="#"
-                      className="text-[14px] text-gray-300 dark:text-slate-400 hover:text-[#e83e8c] transition-colors duration-200"
+                      className="text-[14px] text-gray-300 dark:text-slate-400 hover:text-[#e83e8c] dark:hover:text-[#e83e8c] transition-colors duration-200"
                     >
                       {link}
                     </Link>
