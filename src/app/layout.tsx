@@ -7,6 +7,7 @@ import FooterWrapper from "@/components/layout/FooterWrapper";
 // 1. Import the ThemeProvider
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Preloader from "@/components/layout/Preloader";
+import ScrollToTop from "../components/layout/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -56,6 +57,7 @@ export default function RootLayout({
           <main className="flex-1 w-full">{children}</main>
 
           <FooterWrapper />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>
