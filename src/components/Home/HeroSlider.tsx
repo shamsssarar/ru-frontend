@@ -83,8 +83,8 @@ export default function HeroSlider() {
         </CarouselContent>
 
         {/* Navigation Arrows positioned on the edges */}
-        <CarouselPrevious className="left-4 md:left-8 bg-transparent border-none text-white hover:bg-black/75 h-12 w-12" />
-        <CarouselNext className="right-4 md:right-8 bg-transparent border-none text-white hover:bg-black/75 h-12 w-12" />
+        <CarouselPrevious className="left-4 md:left-8 bg-transparent border-none text-white hover:bg-black/75 h-12 w-12 transition-colors duration-300" />
+        <CarouselNext className="right-4 md:right-8 bg-transparent border-none text-white hover:bg-black/75 h-12 w-12 transition-colors duration-300" />
       </Carousel>
     </section>
   );

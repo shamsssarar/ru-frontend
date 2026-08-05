@@ -12,27 +12,27 @@ const apaData = [
     links: [
       {
         text: "শুদ্ধাচার কৌশল কর্মপরিকল্পনা",
-        url: "https://www.ru.ac.bd/apa/purification-strategy-action-plan/",
+        url: "apa/purification-strategy-action-plan/",
       },
       {
         text: "ফোকাল পয়েন্ট কর্মকর্তা ও বিকল্প কর্মকর্তা",
-        url: "https://www.ru.ac.bd/apa/focal-point-officer-and-substitute-officer/",
+        url: "apa/focal-point-officer-and-substitute-officer/",
       },
       {
         text: "ত্রৈমাসিক/ষান্মাসিক মূল্যায়ন প্রতিবেদন",
-        url: "https://www.ru.ac.bd/apa/quarterly-six-monthly-monitoring-evaluation-reports/",
+        url: "apa/quarterly-six-monthly-monitoring-evaluation-reports/",
       },
       {
         text: "প্রজ্ঞাপন/পরিপত্র/নীতিমালা",
-        url: "https://www.ru.ac.bd/apa/notifications-circulars-policies/",
+        url: "apa/notifications-circulars-policies/",
       },
       {
         text: "শুদ্ধাচার পুরস্কার",
-        url: "https://www.ru.ac.bd/apa/purity-award/",
+        url: "apa/purity-award/",
       },
       {
         text: "নৈতিকতা কমিটি",
-        url: "https://www.ru.ac.bd/apa/ethics-committee/",
+        url: "apa/ethics-committee/",
       },
     ],
   },
@@ -43,19 +43,19 @@ const apaData = [
     links: [
       {
         text: "এপিএ নির্দেশিকা/পরিপত্র/এপিএ টিম",
-        url: "https://www.ru.ac.bd/apa/apa-guidelines-circulars-apa-team/",
+        url: "apa/apa-guidelines-circulars-apa-team/",
       },
       {
         text: "বার্ষিক কর্মসম্পাদন চুক্তিসমূহ",
-        url: "https://www.ru.ac.bd/apa/annual-performance-contracts/",
+        url: "apa/annual-performance-contracts/",
       },
       {
         text: "অফিস আদেশ/পরিবীক্ষণ ও মূল্যায়ন প্রতিবেদন",
-        url: "https://www.ru.ac.bd/apa/office-order-inspection-and-evaluation-report/",
+        url: "apa/office-order-inspection-and-evaluation-report/",
       },
       {
         text: "এপিএ এমএস সফটওয়্যার লিংক",
-        url: "https://www.ru.ac.bd/apa/apa-ms-software-links/",
+        url: "apa/apa-ms-software-links/",
       },
     ],
   },
@@ -65,18 +65,18 @@ const apaData = [
     image:
       "https://www.ru.ac.bd/wp-content/uploads/2022/10/innovation_logo.png",
     links: [
-      { text: "ইনোভেশন টীম", url: "https://www.ru.ac.bd/apa/innovation-team/" },
+      { text: "ইনোভেশন টীম", url: "apa/innovation-team/" },
       {
         text: "প্রজ্ঞাপন/নীতিমালা/অফিস আদেশ",
-        url: "https://www.ru.ac.bd/apa/notifications-policies-office-orders/",
+        url: "apa/notifications-policies-office-orders/",
       },
       {
         text: "বার্ষিক উদ্ভাবনী কর্মপরিকল্পনা/কার্যবিবরণী",
-        url: "https://www.ru.ac.bd/apa/annual-innovation-action-plan-action-statement/",
+        url: "apa/annual-innovation-action-plan-action-statement/",
       },
       {
         text: "শ্রেষ্ঠ উদ্ভাবনী ধারণা/বাস্তবায়ন ও শোকেসিং",
-        url: "https://www.ru.ac.bd/apa/best-innovative-concept-implementation-and-showcase/",
+        url: "apa/best-innovative-concept-implementation-and-showcase/",
       },
     ],
   },
@@ -87,19 +87,19 @@ const apaData = [
     links: [
       {
         text: "অনিক ও আপিল কর্মকর্তা",
-        url: "https://www.ru.ac.bd/apa/grievance-redressal-officer-appeal-officer/",
+        url: "apa/grievance-redressal-officer-appeal-officer/",
       },
       {
         text: "মাসিক/ত্রৈমাসিক/বার্ষিক মূল্যায়ন প্রতিবেদন",
-        url: "https://www.ru.ac.bd/apa/monthly-quarterly-annual-evaluation-report/",
+        url: "apa/monthly-quarterly-annual-evaluation-report/",
       },
       {
         text: "অভিযোগ দাখিল (অনলাইন/সরাসরি)",
-        url: "https://www.ru.ac.bd/apa/complaint-submission-online-direct/",
+        url: "apa/complaint-submission-online-direct/",
       },
       {
         text: "আইন/বিধি/পরি-পত্র/নীতিমালা/নির্দেশিকা",
-        url: "https://www.ru.ac.bd/apa/laws-rules-regulations-policies-guidelines/",
+        url: "apa/laws-rules-regulations-policies-guidelines/",
       },
     ],
   },
@@ -110,23 +110,23 @@ const apaData = [
     links: [
       {
         text: "দায়িত্বপ্রাপ্ত কর্মকর্তা ও আপিল কর্তৃপক্ষ",
-        url: "https://www.ru.ac.bd/apa/responsible-officer-and-appellate-authority/",
+        url: "apa/responsible-officer-and-appellate-authority/",
       },
       {
         text: "আবেদন ও আপিল ফরম",
-        url: "https://www.ru.ac.bd/apa/application-and-appeal-form/",
+        url: "apa/application-and-appeal-form/",
       },
       {
         text: "স্বপ্রণোদিতভাবে প্রকাশযোগ্য তথ্যসমূহ",
-        url: "https://www.ru.ac.bd/apa/voluntarily-disclosable-information/",
+        url: "apa/voluntarily-disclosable-information/",
       },
       {
         text: "আইন/বিধি/পরি-পত্র/নীতিমালা/নির্দেশিকা",
-        url: "https://www.ru.ac.bd/apa/laws-rules-regulations-policies-guidelines-2/",
+        url: "apa/laws-rules-regulations-policies-guidelines-2/",
       },
       {
         text: "তথ্যের ক্যাটাগরি ও ক্যাটালগ",
-        url: "https://www.ru.ac.bd/apa/categories-and-catalogs-of-information/",
+        url: "apa/categories-and-catalogs-of-information/",
       },
     ],
   },
@@ -137,23 +137,23 @@ const apaData = [
     links: [
       {
         text: "সিটিজেন চার্টার",
-        url: "https://www.ru.ac.bd/apa/citizen-charter/",
+        url: "apa/citizen-charter/",
       },
       {
         text: "ফোকাল পয়েন্ট কর্মকর্তা/পরিবীক্ষণ কমিটি",
-        url: "https://www.ru.ac.bd/apa/focal-point-officer-monitoring-committee/",
+        url: "apa/focal-point-officer-monitoring-committee/",
       },
       {
         text: "ত্রৈমাসিক/বার্ষিক পরিবীক্ষণ/মূল্যায়ন প্রতিবেদন",
-        url: "https://www.ru.ac.bd/apa/quarterly-annual-monitoring-evaluation-reports/",
+        url: "apa/quarterly-annual-monitoring-evaluation-reports/",
       },
       {
         text: "আইন/বিধি/নীতিমালা ও পরিপত্র",
-        url: "https://www.ru.ac.bd/apa/laws-rules-policies-and-circulars/",
+        url: "apa/laws-rules-policies-and-circulars/",
       },
       {
         text: "সিটিজেন চার্টার কমিটি",
-        url: "https://www.ru.ac.bd/apa/citizen-charter-committee/",
+        url: "apa/citizen-charter-committee/",
       },
     ],
   },
@@ -161,7 +161,7 @@ const apaData = [
 
 export default function APASection() {
   return (
-    <section className="w-full bg-gray-50 flex justify-center pb-16 animate-in fade-in duration-[2000ms]">
+    <section className="w-full bg-gray-50 flex justify-center pb-16 animate-in fade-in duration-[2000ms] transition-colors duration-300 dark:bg-slate-950">
       <div className="container mx-auto px-4 md:px-0 max-w-[1140px]">
         {/* Section Header */}
         <div className="mb-8 pl-4">
@@ -175,7 +175,7 @@ export default function APASection() {
           {apaData.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-[25px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] flex flex-col items-center p-6 lg:p-8 h-full transition-transform hover:-translate-y-1"
+              className="bg-white dark:bg-slate-900 rounded-[25px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] flex flex-col items-center p-6 lg:p-8 h-full transition-transform hover:-translate-y-1 transition-colors duration-300"
             >
               {/* Image Header */}
               <div className="mb-4">
@@ -189,7 +189,7 @@ export default function APASection() {
               </div>
 
               {/* Title (Green) */}
-              <h3 className="text-[18px] font-roboto font-bold text-[#008000] text-center mb-6 w-full">
+              <h3 className="text-[18px] font-roboto font-bold text-[#008000] text-center mb-6 w-full dark:text-blue-300">
                 {item.title}
               </h3>
 
@@ -198,7 +198,7 @@ export default function APASection() {
                 {item.links.map((link, index) => (
                   <li key={index} className="flex items-start gap-2">
                     {/* Custom Green Arrow Bullet */}
-                    <div className="mt-[2px] text-[#008000] shrink-0">
+                    <div className="mt-[2px] text-[#008000] dark:text-[#6EC1E4] shrink-0">
                       <ChevronRight className="w-4 h-4" strokeWidth={3} />
                     </div>
                     {/* Blue Link Text */}
@@ -206,7 +206,7 @@ export default function APASection() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#0000FF] hover:text-[#0000AA] font-roboto text-[14px] leading-tight hover:underline underline-offset-2"
+                      className="text-[#0000FF] hover:text-[#0000AA] font-roboto text-[14px] leading-tight hover:underline underline-offset-2 transition-colors duration-300 dark:text-blue-300 dark:hover:text-[#6EC1E4]"
                     >
                       {link.text}
                     </Link>

@@ -68,10 +68,10 @@ const events = [
 
 export default function LatestNotices() {
   return (
-    <section className="w-full bg-gray-50 flex justify-center pb-16 animate-in fade-in duration-[2000ms]">
+    <section className="w-full bg-gray-50 flex justify-center pb-16 animate-in fade-in duration-[2000ms] transition-colors duration-300 dark:bg-slate-950">
       <div className="container mx-auto px-4 md:px-0 max-w-[1140px]">
         {/* MAIN WRAPPER */}
-        <div className="bg-white border-t-[3px] border-t-[#575757] rounded-[25px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] p-[20px] md:p-[50px] w-full min-h-[400px]">
+        <div className="bg-white dark:bg-slate-900 border-t-[3px] border-t-[#575757] dark:border-slate-700 rounded-[25px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] p-[20px] md:p-[50px] w-full min-h-[400px] transition-colors duration-300">
           {/* ======================= */}
           {/* 1. LATEST NOTICES SECTION */}
           {/* ======================= */}
@@ -79,7 +79,7 @@ export default function LatestNotices() {
             <h2 className="text-[24px] md:text-[28px] font-roboto font-bold text-[#6EC1E4] uppercase tracking-wide">
               LATEST NOTICES
             </h2>
-            <div className="w-full h-[1px] bg-gray-300 mt-2 mb-6"></div>
+            <div className="w-full h-[1px] bg-gray-300 mt-2 mb-6 dark:bg-slate-700"></div>
           </div>
 
           <div className="flex flex-col gap-3">
@@ -88,7 +88,7 @@ export default function LatestNotices() {
                 key={notice.id}
                 className="flex items-stretch bg-[#1b2032] text-white rounded-md overflow-hidden shadow-sm transition-transform hover:-translate-y-[2px]"
               >
-                <div className="flex flex-col items-center justify-center bg-[#1b2032] border-r border-gray-600 px-4 md:px-6 py-3 min-w-[70px] md:min-w-[90px]">
+                <div className="flex flex-col items-center justify-center bg-[#1b2032] border-r border-gray-600 dark:border-slate-700 px-4 md:px-6 py-3 min-w-[70px] md:min-w-[90px]">
                   <span className="text-[18px] md:text-[20px] font-bold leading-none">
                     {new Date(notice.date).getDate()}
                   </span>
@@ -101,7 +101,7 @@ export default function LatestNotices() {
                 <div className="flex-1 flex items-center px-4 md:px-6 py-3">
                   <Link
                     href={notice.link}
-                    className="text-[14px] md:text-[15px] font-roboto font-medium hover:text-gray-300 transition-colors line-clamp-2"
+                    className="text-[14px] md:text-[15px] font-roboto font-medium hover:text-gray-300 dark:hover:text-slate-200 transition-colors line-clamp-2"
                   >
                     {notice.title}
                   </Link>
@@ -132,18 +132,18 @@ export default function LatestNotices() {
           {/* 2. EVENTS SECTION         */}
           {/* ======================= */}
           <div className="mb-6">
-            <div className="w-full h-[1px] bg-gray-300 mb-6"></div>
+            <div className="w-full h-[1px] bg-gray-300 mb-6 dark:bg-slate-700"></div>
             <h2 className="text-[24px] md:text-[28px] font-roboto font-bold text-[#6EC1E4] uppercase tracking-wide">
               EVENTS
             </h2>
-            <div className="w-full h-[1px] bg-gray-300 mt-2 mb-6"></div>
+            <div className="w-full h-[1px] bg-gray-300 mt-2 mb-6 dark:bg-slate-700"></div>
           </div>
 
           <div className="flex flex-col gap-6">
             {events.map((event) => (
               <div
                 key={event.id}
-                className="flex flex-col md:flex-row bg-gray-50 border border-gray-200 rounded-md overflow-hidden transition-shadow hover:shadow-md"
+                className="flex flex-col md:flex-row bg-gray-50 border border-gray-200 rounded-md overflow-hidden transition-shadow hover:shadow-md transition-colors duration-300 dark:bg-slate-950 dark:border-slate-700"
               >
                 {/* Event Image */}
                 <div className="w-full md:w-[350px] shrink-0">
@@ -158,13 +158,13 @@ export default function LatestNotices() {
 
                 {/* Event Text */}
                 <div className="flex flex-col justify-center p-6 md:p-8 flex-1">
-                  <div className="flex items-center gap-2 text-[#7A7A7A] text-[14px] font-medium mb-3">
+                  <div className="flex items-center gap-2 text-[#7A7A7A] text-[14px] font-medium mb-3 dark:text-slate-400">
                     <Calendar className="w-4 h-4" />
                     <span>{event.date}</span>
                   </div>
 
                   <Link href={event.link} className="group block mb-6">
-                    <h3 className="text-[18px] md:text-[20px] font-roboto font-bold text-[#333333] group-hover:text-ru-blue transition-colors leading-tight">
+                    <h3 className="text-[18px] md:text-[20px] font-roboto font-bold text-[#333333] dark:text-slate-200 group-hover:text-ru-blue transition-colors leading-tight">
                       {event.title}
                     </h3>
                   </Link>
@@ -172,7 +172,7 @@ export default function LatestNotices() {
                   <div>
                     <Link
                       href={event.link}
-                      className="inline-flex items-center gap-1 text-[#333333] hover:text-[#6EC1E4] font-bold text-[13px] uppercase transition-colors"
+                      className="inline-flex items-center gap-1 text-[#333333] dark:text-slate-200 hover:text-[#6EC1E4] font-bold text-[13px] uppercase transition-colors"
                     >
                       READ MORE
                       <ChevronRight className="w-4 h-4" />

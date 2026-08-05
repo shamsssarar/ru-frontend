@@ -37,7 +37,7 @@ const stats = [
 
 export default function StatsBar() {
   return (
-    <section className="w-full bg-gray-50 flex items-center py-10 lg:py-0 lg:h-[150px] animate-in fade-in slide-in-from-bottom-8 duration-1000">
+    <section className="w-full bg-gray-50 flex items-center py-10 lg:py-0 lg:h-[150px] animate-in fade-in slide-in-from-bottom-8 duration-1000 transition-colors duration-300 dark:bg-slate-950">
       <div className="container mx-auto px-4 md:px-0 max-w-[1140px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 w-full">
           {stats.map((stat) => {
@@ -57,7 +57,7 @@ export default function StatsBar() {
                     {stat.title}
                   </h3>
                   {stat.value && (
-                    <p className="text-[14px] text-gray-300 mt-1 font-medium">
+                    <p className="text-[14px] text-gray-300 mt-1 font-medium dark:text-slate-400">
                       {stat.value}
                     </p>
                   )}

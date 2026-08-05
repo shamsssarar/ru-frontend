@@ -24,7 +24,7 @@ export default async function DepartmentMembersPage({
   );
 
   return (
-    <div className="w-full bg-white min-h-screen flex flex-col">
+    <div className="w-full bg-white min-h-screen flex flex-col transition-colors duration-300 dark:bg-slate-900">
       {/* 1. Spacer to prevent Global Navbar overlap */}
       <div className="h-[70px] bg-[#002147] w-full shrink-0"></div>
 
@@ -34,7 +34,7 @@ export default async function DepartmentMembersPage({
       {/* 3. Main Content Container */}
       <div className="container mx-auto max-w-[1140px] px-4 md:px-0 pb-16 pt-8 flex-grow">
         {/* Light Blue Department Header */}
-        <div className="bg-[#d9edf7] border border-[#bce8f1] text-[#31708f] p-[15px] mb-[20px] text-center">
+        <div className="bg-[#d9edf7] border border-[#bce8f1] text-[#31708f] p-[15px] mb-[20px] text-center transition-colors duration-300 dark:bg-slate-800 dark:border-slate-700 dark:text-blue-300">
           <h2 className="text-[24px] md:text-[30px] font-normal m-0">
             {deptInfo.name}
           </h2>
@@ -45,11 +45,11 @@ export default async function DepartmentMembersPage({
           {departmentTeachers.map((teacher) => (
             <div
               key={teacher.id}
-              className="flex flex-col md:flex-row border-b border-[#dddddd] py-6 gap-4 md:gap-8"
+              className="flex flex-col md:flex-row border-b border-[#dddddd] dark:border-slate-700 py-6 gap-4 md:gap-8"
             >
               {/* Image Column (col-xs-4 col-lg-2) */}
               <div className="w-[120px] md:w-[15%] shrink-0 flex justify-center md:justify-start">
-                <div className="relative w-[120px] h-[150px] rounded-md overflow-hidden bg-gray-100">
+                <div className="relative w-[120px] h-[150px] rounded-md overflow-hidden bg-gray-100 dark:bg-slate-950 transition-colors duration-300">
                   <Image
                     src={teacher.image}
                     alt={teacher.name}
@@ -62,20 +62,20 @@ export default async function DepartmentMembersPage({
               {/* Details Column (col-xs-8 col-lg-10) */}
               <div className="flex-1 relative pb-[50px] md:pb-[40px]">
                 <p className="mb-4 leading-[1.4]">
-                  <strong className="text-[16px] text-[#333333] uppercase">
+                  <strong className="text-[16px] text-[#333333] uppercase dark:text-slate-200">
                     {teacher.name}
                   </strong>
                   <br />
-                  <span className="text-[13px] text-[#333333] uppercase">
+                  <span className="text-[13px] text-[#333333] uppercase dark:text-slate-200">
                     {teacher.designation}
                   </span>
                   <br />
-                  <span className="text-[13px] text-[#333333] italic">
+                  <span className="text-[13px] text-[#333333] italic dark:text-slate-200">
                     {teacher.education}
                   </span>
                 </p>
 
-                <p className="text-[14px] text-[#333333] leading-[1.6]">
+                <p className="text-[14px] text-[#333333] leading-[1.6] dark:text-slate-200">
                   <strong>Research Interest:</strong>{" "}
                   {teacher.researchInterest || "Not Provided"}
                   <br />
@@ -85,7 +85,7 @@ export default async function DepartmentMembersPage({
                 {/* Details Button - Positioned at bottom left like the original */}
                 <Link
                   href={`/academic/departments/${slug}/members/${teacher.id}`}
-                  className="absolute bottom-2 left-0 inline-flex items-center gap-1.5 bg-[#337ab7] hover:bg-[#286090] border border-[#2e6da4] text-white px-3 py-1.5 rounded-[3px] text-[14px] transition-colors"
+                  className="absolute bottom-2 left-0 inline-flex items-center gap-1.5 bg-[#337ab7] hover:bg-[#286090] border border-[#2e6da4] text-white px-3 py-1.5 rounded-[3px] text-[14px] transition-colors duration-300 dark:focus-visible:ring-0"
                 >
                   Details <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -95,7 +95,7 @@ export default async function DepartmentMembersPage({
 
           {/* Empty State */}
           {departmentTeachers.length === 0 && (
-            <div className="text-center text-gray-500 py-12 border-b border-[#dddddd]">
+            <div className="text-center text-gray-500 py-12 border-b border-[#dddddd] dark:text-slate-400 dark:border-slate-700">
               No faculty members found for this department yet.
             </div>
           )}

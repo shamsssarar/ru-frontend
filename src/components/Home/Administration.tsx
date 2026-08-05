@@ -29,7 +29,7 @@ const adminData = [
 
 export default function Administration() {
   return (
-    <section className="w-full bg-gray-50 flex justify-center pb-16 animate-in fade-in duration-[2000ms]">
+    <section className="w-full bg-gray-50 dark:bg-slate-950 flex justify-center pb-16 animate-in fade-in duration-[2000ms] transition-colors duration-300">
       
       {/* 
         CONTAINER:
@@ -48,7 +48,7 @@ export default function Administration() {
             */
             <div 
               key={admin.id} 
-              className="bg-white rounded-[30px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center p-8 text-center h-[500px] transition-transform hover:-translate-y-1"
+              className="bg-white dark:bg-slate-900 rounded-[30px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center p-8 text-center h-[500px] transition-transform hover:-translate-y-1 transition-colors duration-300"
             >
               
               {/* Profile Image */}
@@ -58,7 +58,7 @@ export default function Administration() {
                   alt={admin.name}
                   width={200}
                   height={240}
-                  className="object-cover rounded-lg shadow-sm border border-gray-100 h-[240px] w-auto"
+                  className="object-cover rounded-lg shadow-sm border border-gray-100 dark:border-slate-700 h-[240px] w-auto transition-colors duration-300"
                 />
               </div>
 
@@ -70,7 +70,7 @@ export default function Administration() {
                 >
                   {admin.name}
                 </Link>
-                <p className="text-[#7A7A7A] font-bold text-[13px] uppercase tracking-wide">
+                <p className="text-[#7A7A7A] dark:text-slate-400 font-bold text-[13px] uppercase tracking-wide transition-colors duration-300">
                   {admin.title}
                 </p>
               </div>

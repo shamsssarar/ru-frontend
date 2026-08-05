@@ -21,13 +21,13 @@ export default function DepartmentNavbar({ deptSlug }: { deptSlug: string }) {
             <div key={link.title} className="flex items-center">
               <Link
                 href={link.href}
-                className="text-[12px] md:text-[14px] font-roboto font-semibold text-white hover:text-[#6EC1E4] uppercase tracking-wider transition-colors"
+                className="text-[12px] md:text-[14px] font-roboto font-semibold text-white dark:text-slate-200 hover:text-[#6EC1E4] dark:hover:text-blue-300 uppercase tracking-wider transition-colors duration-300"
               >
                 {link.title}
               </Link>
               {/* Add the vertical divider '|' except for the last item */}
               {index < departmentLinks.length - 1 && (
-                <span className="text-white/50 ml-4 hidden md:inline-block">
+                <span className="text-white/50 ml-4 hidden md:inline-block dark:text-slate-400">
                   |
                 </span>
               )}

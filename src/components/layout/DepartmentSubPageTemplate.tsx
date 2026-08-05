@@ -88,7 +88,7 @@ export default function DepartmentSubPageTemplate({
   }, [api]);
 
   const elementorBoxedClass =
-    "bg-white border-t-[3px] border-t-[#575757] rounded-[3px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] p-[20px] md:p-[40px] relative w-full max-w-[1140px] mx-auto";
+    "bg-white dark:bg-slate-900 border-t-[3px] border-t-[#575757] dark:border-slate-700 rounded-[3px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] p-[20px] md:p-[40px] relative w-full max-w-[1140px] mx-auto transition-colors duration-300";
 
   return (
     <div className="flex flex-col w-full font-roboto min-h-screen">
@@ -133,11 +133,11 @@ export default function DepartmentSubPageTemplate({
       <DepartmentNavbar deptSlug={deptSlug} />
 
       {/* 2. Message Content Area */}
-      <section className="w-full bg-[#f1f1f1] py-12 md:py-16">
+      <section className="w-full bg-[#f1f1f1] py-12 md:py-16 transition-colors duration-300 dark:bg-slate-950">
         <div className="container mx-auto px-4 md:px-0 max-w-[1140px]">
           <div className={elementorBoxedClass}>
             <div className="mb-8 md:mb-10">
-              <h2 className="text-[22px] md:text-[28px] font-bold text-[#337ab7]">
+              <h2 className="text-[22px] md:text-[28px] font-bold text-[#337ab7] dark:text-blue-300">
                 {pageTitle}
               </h2>
             </div>
@@ -153,13 +153,13 @@ export default function DepartmentSubPageTemplate({
                   />
                 </div>
                 <div className="flex flex-col justify-center">
-                  <h3 className="text-[18px] md:text-[22px] font-bold text-[#333333] mb-1">
+                  <h3 className="text-[18px] md:text-[22px] font-bold text-[#333333] mb-1 dark:text-slate-200">
                     {officialName}
                   </h3>
-                  <h4 className="text-[16px] md:text-[18px] font-bold text-[#555555]">
+                  <h4 className="text-[16px] md:text-[18px] font-bold text-[#555555] dark:text-slate-400">
                     {officialTitle}
                   </h4>
-                  <h6 className="text-[14px] md:text-[15px] text-gray-500 mt-1 font-normal">
+                  <h6 className="text-[14px] md:text-[15px] text-gray-500 mt-1 font-normal dark:text-slate-400">
                     {officialSubtitle}
                   </h6>
                 </div>
@@ -168,7 +168,7 @@ export default function DepartmentSubPageTemplate({
               <div className="flex items-center justify-end w-full md:w-auto">
                 <Link
                   href={profileLink}
-                  className="inline-flex items-center gap-2 bg-[#002147] hover:bg-[#001530] text-white px-8 py-3 text-[14px] font-medium rounded-sm transition-colors shadow-md uppercase"
+                  className="inline-flex items-center gap-2 bg-[#002147] hover:bg-[#001530] text-white px-8 py-3 text-[14px] font-medium rounded-sm transition-colors duration-300 shadow-md uppercase dark:focus-visible:ring-0"
                 >
                   <BookOpen className="w-4 h-4" />
                   View Profile
@@ -176,7 +176,7 @@ export default function DepartmentSubPageTemplate({
               </div>
             </div>
 
-            <div className="prose max-w-none text-[#333333] text-[16px] leading-[24px] text-justify font-medium mb-4">
+            <div className="prose max-w-none text-[#333333] text-[16px] leading-[24px] text-justify font-medium mb-4 dark:text-slate-200 transition-colors duration-300">
               {messageContent}
             </div>
           </div>
@@ -184,12 +184,12 @@ export default function DepartmentSubPageTemplate({
       </section>
 
       {/* 3. Events and Notices Side-by-Side Area */}
-      <section className="w-full bg-[#f1f1f1] pb-16">
+      <section className="w-full bg-[#f1f1f1] pb-16 transition-colors duration-300 dark:bg-slate-950">
         <div className="container mx-auto px-4 md:px-0 max-w-[1140px]">
           <div className="flex flex-col lg:flex-row gap-8 items-stretch">
             {/* Left Column: Events */}
-            <div className="w-full lg:w-1/2 bg-white shadow-[0px_0px_10px_0px_rgba(0,0,0,0.15)] rounded-[3px] p-6 md:p-10 flex flex-col border-t-[3px] border-t-[#575757]">
-              <h3 className="text-[22px] md:text-[26px] font-bold text-[#6EC1E4] mb-8">
+            <div className="w-full lg:w-1/2 bg-white dark:bg-slate-900 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.15)] rounded-[3px] p-6 md:p-10 flex flex-col border-t-[3px] border-t-[#575757] dark:border-slate-700 transition-colors duration-300">
+              <h3 className="text-[22px] md:text-[26px] font-bold text-[#6EC1E4] mb-8 dark:text-blue-300">
                 Latest Events
               </h3>
 
@@ -197,7 +197,7 @@ export default function DepartmentSubPageTemplate({
                 {events.map((event) => (
                   <div
                     key={event.id}
-                    className="flex flex-col bg-white border border-gray-200 rounded-sm overflow-hidden transition-shadow hover:shadow-md"
+                    className="flex flex-col bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-sm overflow-hidden transition-shadow hover:shadow-md transition-colors duration-300"
                   >
                     <div className="w-full h-[180px] relative">
                       <Image
@@ -208,16 +208,16 @@ export default function DepartmentSubPageTemplate({
                       />
                     </div>
                     <div className="p-4 flex flex-col justify-center">
-                      <div className="flex items-center gap-2 text-[#7A7A7A] text-[13px] font-medium mb-2">
+                      <div className="flex items-center gap-2 text-[#7A7A7A] text-[13px] font-medium mb-2 dark:text-slate-400">
                         <Calendar className="w-4 h-4" />
                         <span>{event.date}</span>
                       </div>
-                      <h3 className="text-[16px] md:text-[18px] font-bold text-[#333333] hover:text-[#337ab7] transition-colors line-clamp-2 mb-3">
+                      <h3 className="text-[16px] md:text-[18px] font-bold text-[#333333] dark:text-slate-200 hover:text-[#337ab7] dark:hover:text-blue-300 transition-colors line-clamp-2 mb-3">
                         <Link href={event.link}>{event.title}</Link>
                       </h3>
                       <Link
                         href={event.link}
-                        className="inline-flex items-center gap-1 text-[#333333] hover:text-[#6EC1E4] font-bold text-[13px] uppercase"
+                        className="inline-flex items-center gap-1 text-[#333333] dark:text-slate-200 hover:text-[#6EC1E4] font-bold text-[13px] uppercase transition-colors duration-300"
                       >
                         READ MORE <ChevronRight className="w-3.5 h-3.5" />
                       </Link>
@@ -237,8 +237,8 @@ export default function DepartmentSubPageTemplate({
             </div>
 
             {/* Right Column: Notices */}
-            <div className="w-full lg:w-1/2 bg-white shadow-[0px_0px_10px_0px_rgba(0,0,0,0.15)] rounded-[3px] p-6 md:p-10 flex flex-col border-t-[3px] border-t-[#575757]">
-              <h3 className="text-[22px] md:text-[26px] font-bold text-[#6EC1E4] mb-8">
+            <div className="w-full lg:w-1/2 bg-white dark:bg-slate-900 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.15)] rounded-[3px] p-6 md:p-10 flex flex-col border-t-[3px] border-t-[#575757] dark:border-slate-700 transition-colors duration-300">
+              <h3 className="text-[22px] md:text-[26px] font-bold text-[#6EC1E4] mb-8 dark:text-blue-300">
                 Latest Notices
               </h3>
 
@@ -259,7 +259,7 @@ export default function DepartmentSubPageTemplate({
                     <div className="flex-1 flex items-center px-4 py-3">
                       <Link
                         href={notice.link}
-                        className="text-[14px] font-medium hover:text-gray-300 transition-colors line-clamp-2 leading-[22px]"
+                        className="text-[14px] font-medium hover:text-gray-300 dark:text-slate-200 dark:hover:text-slate-200 transition-colors line-clamp-2 leading-[22px]"
                       >
                         {notice.title}
                       </Link>

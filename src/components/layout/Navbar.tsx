@@ -88,7 +88,7 @@ export default function Navbar() {
               <Link
                 key={link.title}
                 href={link.href}
-                className={`font-roboto font-semibold text-white transition-all ease-in duration-250 hover:text-gray-300 uppercase whitespace-nowrap drop-shadow-md ${
+                className={`font-roboto font-semibold text-white dark:text-slate-200 transition-colors duration-300 ease-in duration-250 hover:text-gray-300 uppercase whitespace-nowrap drop-shadow-md ${
                   isScrolled ? "text-[12px]" : "text-[13px]"
                 }`}
               >
@@ -104,7 +104,7 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center h-full" ref={dropdownRef}>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="shrink-0 flex items-center justify-center p-1.5 hover:bg-black/20 rounded-md transition-colors text-white"
+              className="shrink-0 flex items-center justify-center p-1.5 hover:bg-black/20 dark:hover:bg-slate-800 rounded-md transition-colors duration-300 text-white dark:text-slate-200"
               aria-label="Toggle navigation menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -121,7 +121,7 @@ export default function Navbar() {
 
             {/* Floating Dropdown Card */}
             <div
-              className={`absolute top-[100%] left-0 right-0 mt-2 bg-blue-50 dark:bg-slate-900 shadow-[0px_8px_30px_rgba(0,0,0,0.12)] overflow-hidden transition-all duration-300 ease-in-out origin-top rounded-b-md ${
+              className={`absolute top-[100%] left-0 right-0 mt-2 bg-blue-50 dark:bg-slate-800 shadow-[0px_8px_30px_rgba(0,0,0,0.12)] overflow-hidden transition-all duration-300 ease-in-out origin-top rounded-b-md ${
                 isMobileMenuOpen
                   ? "opacity-100 scale-y-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 scale-y-95 -translate-y-2 pointer-events-none"
@@ -133,7 +133,7 @@ export default function Navbar() {
                     key={link.title}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-[18px] font-roboto font-bold text-[#333333] dark:text-slate-200 hover:text-[#002147] dark:hover:text-[#6EC1E4] hover:bg-gray-200 dark:hover:bg-slate-800 px-6 py-3.5 uppercase text-center transition-all"
+                    className="text-[18px] font-roboto font-bold text-[#333333] dark:text-slate-200 hover:text-[#002147] dark:hover:text-[#6EC1E4] hover:bg-gray-200 dark:hover:bg-slate-800 px-6 py-3.5 uppercase text-center transition-colors duration-300"
                   >
                     {link.title}
                   </Link>

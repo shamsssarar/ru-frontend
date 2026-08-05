@@ -444,7 +444,7 @@ export default function DepartmentsDirectoryPage() {
   };
 
   return (
-    <div className="flex flex-col w-full font-roboto min-h-screen bg-gray-50">
+    <div className="flex flex-col w-full font-roboto min-h-screen bg-gray-50 transition-colors duration-300 dark:bg-slate-950">
       {/* 1. Hero Banner */}
       <section className="relative w-full h-[250px] md:h-[350px] flex items-center justify-center overflow-hidden">
         <Image
@@ -465,7 +465,7 @@ export default function DepartmentsDirectoryPage() {
       {/* 2. Main Accordion Content Area */}
       <section className="w-full py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-0 max-w-[1140px]">
-          <div className="bg-white border-t-[3px] border-t-[#d32f2f] rounded-b-[15px] shadow-[0px_0px_15px_0px_rgba(0,0,0,0.08)] p-6 md:p-10">
+          <div className="bg-white dark:bg-slate-900 border-t-[3px] border-t-[#d32f2f] dark:border-slate-700 rounded-b-[15px] shadow-[0px_0px_15px_0px_rgba(0,0,0,0.08)] p-6 md:p-10 transition-colors duration-300">
             <h2 className="text-[24px] md:text-[30px] font-bold text-[#337ab7] mb-8 text-center">
               All Departments By Faculty
             </h2>
@@ -477,15 +477,15 @@ export default function DepartmentsDirectoryPage() {
                 return (
                   <div
                     key={index}
-                    className="border border-gray-200 rounded-sm overflow-hidden shadow-sm"
+                    className="border border-gray-200 dark:border-slate-700 rounded-sm overflow-hidden shadow-sm"
                   >
                     {/* Accordion Header */}
                     <button
                       onClick={() => toggleAccordion(index)}
-                      className={`w-full flex justify-between items-center px-6 py-4 transition-colors ${
+                      className={`w-full flex justify-between items-center px-6 py-4 transition-colors duration-300 ${
                         isOpen
                           ? "bg-[#002147] text-white"
-                          : "bg-gray-100 text-[#333333] hover:bg-gray-200"
+                                                : "bg-gray-100 text-[#333333] hover:bg-gray-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-800"
                       }`}
                     >
                       <span className="text-[18px] md:text-[20px] font-bold">
@@ -506,20 +506,20 @@ export default function DepartmentsDirectoryPage() {
                           : "max-h-0 opacity-0 overflow-hidden"
                       }`}
                     >
-                      <div className="p-4 md:p-6 bg-white overflow-x-auto">
+                      <div className="p-4 md:p-6 bg-white dark:bg-slate-900 overflow-x-auto transition-colors duration-300">
                         <table className="w-full text-left border-collapse min-w-[700px]">
                           <thead>
-                            <tr className="bg-gray-50 text-[#337ab7] text-[15px]">
-                              <th className="py-3 px-4 border-b border-gray-200 font-bold w-[10%] text-center">
+                            <tr className="bg-gray-50 dark:bg-slate-950 text-[#337ab7] dark:text-blue-300 text-[15px]">
+                              <th className="py-3 px-4 border-b border-gray-200 dark:border-slate-700 font-bold w-[10%] text-center">
                                 SN
                               </th>
-                              <th className="py-3 px-4 border-b border-gray-200 font-bold w-[35%]">
+                              <th className="py-3 px-4 border-b border-gray-200 dark:border-slate-700 font-bold w-[35%]">
                                 Department
                               </th>
-                              <th className="py-3 px-4 border-b border-gray-200 font-bold w-[35%]">
+                              <th className="py-3 px-4 border-b border-gray-200 dark:border-slate-700 font-bold w-[35%]">
                                 Chairman
                               </th>
-                              <th className="py-3 px-4 border-b border-gray-200 font-bold w-[20%]">
+                              <th className="py-3 px-4 border-b border-gray-200 dark:border-slate-700 font-bold w-[20%]">
                                 Tel (Office)
                               </th>
                             </tr>
@@ -528,12 +528,12 @@ export default function DepartmentsDirectoryPage() {
                             {facultyBlock.departments.map((dept, deptIndex) => (
                               <tr
                                 key={deptIndex}
-                                className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors text-[15px] text-[#333333]"
+                                className="border-b border-gray-100 dark:border-slate-700 hover:bg-gray-50/50 dark:hover:bg-slate-800 transition-colors text-[15px] text-[#333333] dark:text-slate-200"
                               >
-                                <td className="py-4 px-4 text-center font-medium text-gray-500">
+                                <td className="py-4 px-4 text-center font-medium text-gray-500 dark:text-slate-400">
                                   {deptIndex + 1}
                                 </td>
-                                <td className="py-4 px-4 font-bold text-[#002147] hover:text-[#d32f2f] transition-colors">
+                                <td className="py-4 px-4 font-bold text-[#002147] hover:text-[#d32f2f] transition-colors dark:text-blue-300 dark:hover:text-[#6EC1E4]">
                                   <Link href={dept.link}>{dept.name}</Link>
                                 </td>
                                 <td className="py-4 px-4">
@@ -543,7 +543,7 @@ export default function DepartmentsDirectoryPage() {
                                   </div>
                                 </td>
                                 <td className="py-4 px-4">
-                                  <div className="flex items-center gap-2 text-gray-600">
+                                  <div className="flex items-center gap-2 text-gray-600 dark:text-slate-400">
                                     <Phone className="w-4 h-4 text-gray-400 shrink-0" />
                                     <span>{dept.phone || "N/A"}</span>
                                   </div>

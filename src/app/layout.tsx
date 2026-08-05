@@ -43,7 +43,7 @@ export default function RootLayout({
       )}
     >
       <body
-        className={`${inter.className} min-h-screen bg-background font-sans antialiased flex flex-col`}
+        className={`${inter.className} min-h-screen bg-background font-sans antialiased flex flex-col transition-colors duration-300 dark:bg-slate-900`}
       >
         {/* 3. Wrap your layout contents inside the ThemeProvider */}
         <ThemeProvider>
