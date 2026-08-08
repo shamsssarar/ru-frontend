@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function VCMessage() {
   return (
-    <section className="w-full bg-gray-50 flex justify-center pb-12 animate-in fade-in duration-[2000ms] transition-colors duration-300 dark:bg-slate-950">
+    <section className="w-full bg-gray-50 flex justify-center pb-16 animate-in fade-in duration-[2000ms] transition-colors duration-300 dark:bg-slate-950">
       <div className="container pr-8 mx-auto px-4 md:px-0 max-w-[1140px] flex flex-col md:flex-row md:gap-[30px] items-stretch">
         {/* 
           LEFT BOX (Image & Name) 

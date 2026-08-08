@@ -8,76 +8,81 @@ const adminData = [
     id: 1,
     name: "Dr. Md. Abdul Alim",
     title: "Pro-Vice Chancellor (Administration)",
-    image: "https://www.ru.ac.bd/wp-content/uploads/2026/05/Dr.-Md.-Abdul-Alim-225x300.jpg",
-    link: "https://www.ru.ac.bd/pro-vc-administration/",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2026/05/Dr.-Md.-Abdul-Alim-225x300.jpg",
+    link: "administration/pro-vc-administration/",
   },
   {
     id: 2,
     name: "Dr. Mamunur Rashid",
     title: "Pro-Vice Chancellor (Academic)",
-    image: "https://www.ru.ac.bd/wp-content/uploads/2026/06/Dr.-Mamunur-Rashid-3-243x300.jpg",
-    link: "https://www.ru.ac.bd/pro-vc-academic/",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2026/06/Dr.-Mamunur-Rashid-3-243x300.jpg",
+    link: "administration/pro-vc-academic/",
   },
   {
     id: 3,
     name: "Prof (Retd) Md. Matiar Rahman-",
     title: "Treasurer",
-    image: "https://www.ru.ac.bd/wp-content/uploads/2025/07/Md.-Matiar-Rahman-247x300.png",
-    link: "https://www.ru.ac.bd/treasurer/",
+    image:
+      "https://www.ru.ac.bd/wp-content/uploads/2025/07/Md.-Matiar-Rahman-247x300.png",
+    link: "administration/treasurer/",
   },
 ];
 
 export default function Administration() {
   return (
-    <section className="w-full bg-gray-50 dark:bg-slate-950 flex justify-center pb-16 animate-in fade-in duration-[2000ms] transition-colors duration-300">
-      
-      {/* 
-        CONTAINER:
-        - Applied max-w-[1140px] and min-h-[400px] as per computed styles.
-        - Used a 3-column CSS Grid to perfectly distribute the 33% width requirement.
-      */}
-      <div className="container mx-auto px-4 md:px-0 max-w-[1140px] min-h-[400px] lg:h-[522px] flex items-center">
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 w-full h-full py-4 lg:py-0">
-          
+    <section className="w-full bg-gray-50 dark:bg-slate-950 pb-16 animate-in fade-in duration-[2000ms] transition-colors duration-300">
+      <div className="container mx-auto px-4 md:px-0 max-w-[1140px]">
+        {/* 
+          INDUSTRY STANDARD LAYOUT: 
+          Instead of Grid, we use Flexbox with wrap and justify-center.
+          This mathematically guarantees 2 per row on mobile, seamlessly centers the 3rd odd item, 
+          and aligns 3 per row on desktop without writing custom span hacks.
+        */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 w-full mx-auto">
           {adminData.map((admin) => (
-            /* 
-              CARD STYLING:
-              - Inherits the exact shadow and border-radius from the previous section.
-              - h-full ensures all cards stretch to the same height.
-            */
-            <div 
-              key={admin.id} 
-              className="bg-white dark:bg-slate-900 rounded-[30px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center p-8 text-center h-[500px] transition-transform hover:-translate-y-1 transition-colors duration-300"
+            <div
+              key={admin.id}
+              /* 
+                WIDTH CALCULATIONS:
+                Mobile: 50% width minus half the gap (gap-4/6 = 0.5rem to 0.75rem compensation)
+                Desktop: 33.33% width minus the gap
+              */
+              className="group flex flex-col w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(33.333%-1.333rem)] bg-white dark:bg-slate-900 rounded-2xl border border-gray-200/60 dark:border-slate-800 shadow-[0_0_8px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(0,0,0,0.5)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
-              
-              {/* Profile Image */}
-              <div className="relative mb-6">
+              {/* 
+                IMAGE BLOCK:
+                Flush to the edges. Uses a locked aspect ratio (4/5) to ensure all photos 
+                are perfectly uniform regardless of the original image dimensions.
+              */}
+              <div className="relative w-full aspect-[4/5] md:aspect-4/4 bg-gray-100 dark:bg-slate-800 overflow-hidden">
                 <Image
                   src={admin.image}
                   alt={admin.name}
-                  width={200}
-                  height={240}
-                  className="object-cover rounded-lg shadow-sm border border-gray-100 dark:border-slate-700 h-[240px] w-auto transition-colors duration-300"
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                 />
               </div>
 
-              {/* Text Content */}
-              <div className="flex flex-col gap-2 font-roboto">
-                <Link 
+              {/* 
+                TEXT BLOCK:
+                Fluid height (flex-grow), standardized corporate padding, and crisp typography.
+              */}
+              <div className="flex flex-col flex-grow items-center justify-center text-center p-4 md:p-6 bg-white dark:bg-slate-900">
+                <Link
                   href={admin.link}
-                  className="text-blue-600 hover:text-blue-800 transition-colors text-[15px] font-medium hover:underline underline-offset-2"
+                  className="text-[#002147] dark:text-[#6EC1E4] hover:text-blue-600 dark:hover:text-sky-400 font-bold text-[14px] md:text-[17px] leading-tight mb-2 transition-colors"
                 >
                   {admin.name}
                 </Link>
-                <p className="text-[#7A7A7A] dark:text-slate-400 font-bold text-[13px] uppercase tracking-wide transition-colors duration-300">
+                <p className="text-gray-500 dark:text-slate-400 text-[10px] md:text-[12px] font-semibold uppercase tracking-wider leading-snug">
                   {admin.title}
                 </p>
               </div>
-
             </div>
           ))}
-          
         </div>
       </div>
     </section>

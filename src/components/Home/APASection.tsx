@@ -26,14 +26,8 @@ const apaData = [
         text: "প্রজ্ঞাপন/পরিপত্র/নীতিমালা",
         url: "apa/notifications-circulars-policies/",
       },
-      {
-        text: "শুদ্ধাচার পুরস্কার",
-        url: "apa/purity-award/",
-      },
-      {
-        text: "নৈতিকতা কমিটি",
-        url: "apa/ethics-committee/",
-      },
+      { text: "শুদ্ধাচার পুরস্কার", url: "apa/purity-award/" },
+      { text: "নৈতিকতা কমিটি", url: "apa/ethics-committee/" },
     ],
   },
   {
@@ -53,10 +47,7 @@ const apaData = [
         text: "অফিস আদেশ/পরিবীক্ষণ ও মূল্যায়ন প্রতিবেদন",
         url: "apa/office-order-inspection-and-evaluation-report/",
       },
-      {
-        text: "এপিএ এমএস সফটওয়্যার লিংক",
-        url: "apa/apa-ms-software-links/",
-      },
+      { text: "এপিএ এমএস সফটওয়্যার লিংক", url: "apa/apa-ms-software-links/" },
     ],
   },
   {
@@ -112,10 +103,7 @@ const apaData = [
         text: "দায়িত্বপ্রাপ্ত কর্মকর্তা ও আপিল কর্তৃপক্ষ",
         url: "apa/responsible-officer-and-appellate-authority/",
       },
-      {
-        text: "আবেদন ও আপিল ফরম",
-        url: "apa/application-and-appeal-form/",
-      },
+      { text: "আবেদন ও আপিল ফরম", url: "apa/application-and-appeal-form/" },
       {
         text: "স্বপ্রণোদিতভাবে প্রকাশযোগ্য তথ্যসমূহ",
         url: "apa/voluntarily-disclosable-information/",
@@ -135,10 +123,7 @@ const apaData = [
     title: "সেবা প্রদান প্রতিশ্রুতি (সিটিজেনস চার্টার)",
     image: "https://www.ru.ac.bd/wp-content/uploads/2022/10/citizen_logo.png",
     links: [
-      {
-        text: "সিটিজেন চার্টার",
-        url: "apa/citizen-charter/",
-      },
+      { text: "সিটিজেন চার্টার", url: "apa/citizen-charter/" },
       {
         text: "ফোকাল পয়েন্ট কর্মকর্তা/পরিবীক্ষণ কমিটি",
         url: "apa/focal-point-officer-monitoring-committee/",
@@ -151,62 +136,65 @@ const apaData = [
         text: "আইন/বিধি/নীতিমালা ও পরিপত্র",
         url: "apa/laws-rules-policies-and-circulars/",
       },
-      {
-        text: "সিটিজেন চার্টার কমিটি",
-        url: "apa/citizen-charter-committee/",
-      },
+      { text: "সিটিজেন চার্টার কমিটি", url: "apa/citizen-charter-committee/" },
     ],
   },
 ];
 
 export default function APASection() {
   return (
-    <section className="w-full bg-gray-50 flex justify-center pb-16 animate-in fade-in duration-[2000ms] transition-colors duration-300 dark:bg-slate-950">
+    <section className="w-full bg-gray-50 flex justify-center pb-16 animate-in slide-in-from-bottom-8 duration-[2000ms] transition-colors duration-300 dark:bg-slate-950">
       <div className="container mx-auto px-4 md:px-0 max-w-[1140px]">
         {/* Section Header */}
-        <div className="mb-8 pl-4">
-          <h2 className="text-[20px] md:text-[24px] font-roboto font-bold text-[#008000] uppercase tracking-wide">
+        <div className="mb-6 md:mb-8 pl-2 md:pl-4">
+          <h2 className="text-[16px] md:text-[24px] font-roboto font-bold text-[#008000] uppercase tracking-wide leading-tight">
             বার্ষিক কর্মসম্পাদন চুক্তি - ANNUAL PERFORMANCE AGREEMENT (APA)
           </h2>
         </div>
 
         {/* CSS Grid for the 6 Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
+        {/* Changed to grid-cols-2 on mobile, adjusting gaps for tighter spaces */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8 w-full">
           {apaData.map((item) => (
             <div
               key={item.id}
-              className="bg-white dark:bg-slate-900 rounded-[25px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] flex flex-col items-center p-6 lg:p-8 h-full transition-transform hover:-translate-y-1 transition-colors duration-300"
+              className="bg-white dark:bg-slate-900 rounded-[20px] md:rounded-[25px] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)] flex flex-col items-center p-3 sm:p-4 md:p-6 lg:p-8 h-full transition-transform hover:-translate-y-1 transition-colors duration-300"
             >
               {/* Image Header */}
-              <div className="mb-4">
+              <div className="mb-3 md:mb-4">
                 <Image
                   src={item.image}
                   alt={item.title}
                   width={120}
                   height={120}
-                  className="object-contain"
+                  // Responsive image scaling: tiny on mobile, full size on desktop
+                  className="w-[60px] sm:w-[80px] md:w-[100px] lg:w-[120px] h-auto object-contain"
                 />
               </div>
 
               {/* Title (Green) */}
-              <h3 className="text-[18px] font-roboto font-bold text-[#008000] text-center mb-6 w-full dark:text-blue-300">
+              <h3 className="text-[13px] sm:text-[15px] md:text-[18px] font-roboto font-bold text-[#008000] text-center mb-4 md:mb-6 w-full dark:text-blue-300 leading-snug">
                 {item.title}
               </h3>
 
               {/* Links List */}
-              <ul className="flex flex-col gap-3 w-full">
+              <ul className="flex flex-col gap-2 md:gap-3 w-full">
                 {item.links.map((link, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    {/* Custom Green Arrow Bullet */}
-                    <div className="mt-[2px] text-[#008000] dark:text-[#6EC1E4] shrink-0">
-                      <ChevronRight className="w-4 h-4" strokeWidth={3} />
+                  <li key={index} className="flex items-start gap-1.5 md:gap-2">
+                    {/* Custom Green Arrow Bullet - scaled for mobile */}
+                    <div className="mt-[2px] md:mt-[3px] text-[#008000] dark:text-[#6EC1E4] shrink-0">
+                      <ChevronRight
+                        className="w-3 h-3 md:w-4 md:h-4"
+                        strokeWidth={3}
+                      />
                     </div>
-                    {/* Blue Link Text */}
+
+                    {/* Blue Link Text - scaled for mobile */}
                     <Link
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#0000FF] hover:text-[#0000AA] font-roboto text-[14px] leading-tight hover:underline underline-offset-2 transition-colors duration-300 dark:text-blue-300 dark:hover:text-[#6EC1E4]"
+                      className="text-[#0000FF] hover:text-[#0000AA] font-roboto text-[12px] sm:text-[12px] md:text-[14px] leading-tight hover:underline underline-offset-2 transition-colors duration-300 dark:text-blue-300 dark:hover:text-[#6EC1E4]"
                     >
                       {link.text}
                     </Link>

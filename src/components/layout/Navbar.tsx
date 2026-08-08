@@ -66,7 +66,7 @@ export default function Navbar() {
               className={`relative transition-all duration-250 ease-in-out ${
                 isScrolled
                   ? "w-[220px] h-[35px] lg:w-[240px] lg:h-[38px]"
-                  : "w-[300px] h-[50px] lg:w-[280px] lg:h-[45px]"
+                  : "w-[280px] h-[48px] lg:w-[280px] lg:h-[45px]"
               }`}
             >
               <Image
